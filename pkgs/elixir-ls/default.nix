@@ -4,13 +4,13 @@
 
 stdenv.mkDerivation rec {
   pname = "elixir-ls";
-  version = "0.5.0";
+  version = "0.6.2";
 
   targetPath = "$out/bin";
 
   src = fetchurl {
     url = "https://github.com/elixir-lsp/elixir-ls/releases/download/v${version}/elixir-ls.zip";
-    sha256 = "009g6pg13ngdik9yd5s141v5x8w4yzi7288zyzfszshwqpai8sfz";
+    sha256 = "1ip46b1vfkncrahghjvwdbxaaw1blp66gi9vym5q4rrgcw710j8i";
   };
 
   buildInputs = [ pkgs.makeWrapper ];

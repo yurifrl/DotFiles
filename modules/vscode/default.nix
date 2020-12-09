@@ -15,7 +15,6 @@ let
 
 in {
   config.environment.systemPackages = [
-    # unstable.vscode
     vscode-with-extensions
   ];
 }

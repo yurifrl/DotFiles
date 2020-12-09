@@ -3,10 +3,12 @@
 with builtins;
 let
   modules = import ./modules;
+  me = "yurif";
+  keybase = "$HOME/KeybaseTmp/private/yurifrl";
 in {
-  imports = [ 
+  imports = [
     ./home
-    modules.vscode
+    # modules.vscode
   ];
 
   nixpkgs.config = {
@@ -22,25 +24,48 @@ in {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs;[
-    vim
-    emacs
-    yuri.elixir-ls
+    ag
+    alacritty
     elixir
-    # iterm2
+    emacs
     git-hub
     gitAndTools.diff-so-fancy
     gitAndTools.gitui
-    alacritty
+    powerline-fonts
+    ranger
+    tmux
+    vim
+    yuri.elixir-ls
+    yuri.osxfuse
   ];
+
+  # Environment Variables enabled system wide?
+  # needs shell complete reboot
+  environment.variables = {
+    EDITOR = "vim";
+    # Disable docker for spacefish
+    SPACEFISH_DOCKER_SHOW = "false";
+    KEYBASE = keybase;
+  };
+
+  nix = {
+    gc = {
+      user = "yurif";
+      automatic = true;
+      # dates = "03:15";
+    };
+  };
 
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
   # environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
 
   # Auto upgrade nix package and the daemon service.
+  # Not using as daemon
   # services.nix-daemon.enable = true;
-  # nix.package = pkgs.nix;
+  nix.package = pkgs.nix;
 
+  # Needs this here
   # Create /etc/bashrc that loads the nix-darwin environment.
   programs.fish.enable = true;  # default shell on catalina
 

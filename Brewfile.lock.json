@@ -1,0 +1,98 @@
+{
+  "entries": {
+    "tap": {
+      "homebrew/bundle": {
+        "revision": "6fa389091d1b7450df0701d6a0d20e862bda6507"
+      },
+      "homebrew/core": {
+        "revision": "160b47aa1c5a6ca88c91b007110f77b6a5b7f068"
+      }
+    },
+    "cask": {
+      "docker": {
+        "version": "2.5.0.1,49550",
+        "options": {
+          "full_name": "docker"
+        }
+      },
+      "keybase": {
+        "version": "5.5.0-20200526170801,139bb348af",
+        "options": {
+          "full_name": "keybase"
+        }
+      },
+      "slack": {
+        "version": "4.11.3",
+        "options": {
+          "full_name": "slack"
+        }
+      },
+      "discord": {
+        "version": "0.0.260",
+        "options": {
+          "full_name": "discord"
+        }
+      },
+      "forticlient": {
+        "version": "6.4",
+        "options": {
+          "full_name": "forticlient"
+        }
+      },
+      "zoom": {
+        "version": "5.4.59296.1207",
+        "options": {
+          "full_name": "zoom"
+        }
+      },
+      "whatsapp": {
+        "version": "2.2047.12",
+        "options": {
+          "full_name": "whatsapp"
+        }
+      },
+      "notion": {
+        "version": "2.0.11",
+        "options": {
+          "full_name": "notion"
+        }
+      },
+      "parsec": {
+        "version": "2.0.0",
+        "options": {
+          "full_name": "parsec"
+        }
+      },
+      "appcleaner": {
+        "version": "3.5.1",
+        "options": {
+          "full_name": "appcleaner"
+        }
+      },
+      "grammarly": {
+        "version": "latest",
+        "options": {
+          "full_name": "grammarly"
+        }
+      },
+      "amethyst": {
+        "version": "0.15.4",
+        "options": {
+          "full_name": "amethyst"
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "big_sur": {
+        "HOMEBREW_VERSION": "2.6.1",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "160b47aa1c5a6ca88c91b007110f77b6a5b7f068",
+        "CLT": "12.2.0.0.1.1604076827",
+        "Xcode": "12.2",
+        "macOS": "11.0.1"
+      }
+    }
+  }
+}
