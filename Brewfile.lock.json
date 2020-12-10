@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "6fa389091d1b7450df0701d6a0d20e862bda6507"
+        "revision": "5628f2152de4896e0994fe0c3c1d0d7350ddf1ff"
       },
       "homebrew/core": {
-        "revision": "f04eed9818aa3342597649c2bef1f48b94748e34"
+        "revision": "661095d3010a4c0cb455a6e063c1c30817ec9b72"
       }
     },
     "cask": {
@@ -86,6 +86,18 @@
         "options": {
           "full_name": "gpg-suite"
         }
+      },
+      "github": {
+        "version": "2.6.0-b666c0f3",
+        "options": {
+          "full_name": "github"
+        }
+      },
+      "gitify": {
+        "version": "3.1.0",
+        "options": {
+          "full_name": "gitify"
+        }
       }
     }
   },
@@ -94,7 +106,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "2.6.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "f04eed9818aa3342597649c2bef1f48b94748e34",
+        "Homebrew/homebrew-core": "661095d3010a4c0cb455a6e063c1c30817ec9b72",
         "CLT": "12.2.0.0.1.1604076827",
         "Xcode": "12.2",
         "macOS": "11.0.1"

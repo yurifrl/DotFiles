@@ -72,4 +72,19 @@ in {
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
+
+  # Suppose to fix applications not showing in the applications folder
+  # https://github.com/LnL7/nix-darwin/issues/139#issuecomment-666771621
+  # https://github.com/LnL7/nix-darwin/issues/214
+  system.activationScripts.applications.text = pkgs.lib.mkForce (''
+      echo "setting up ~/Applications/Nix..."
+      rm -rf ~/Applications/Nix
+      mkdir -p ~/Applications/Nix
+      chown ${me} ~/Applications/Nix
+      find ${config.system.build.applications}/Applications -maxdepth 1 -type l | while read f; do
+        src="$(/usr/bin/stat -f%Y $f)"
+        appname="$(basename $src)"
+        osascript -e "tell app \"Finder\" to make alias file at POSIX file \"/Users/${me}/Applications/Nix/\" to POSIX file \"$src\" with properties {name: \"$appname\"}";
+    done
+  '');
 }

@@ -72,7 +72,7 @@
             proj = "touch .projectile";
             gh = "git-hub";
             vrau = "cd $HOME/DotFiles & brew bundle install";
-            uvrau = "cd $HOME/DotFiles & brew bundle clean";
+            uvrau = "cd $HOME/DotFiles & brew bundle cleanup";
           };
         };
       };
