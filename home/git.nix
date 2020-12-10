@@ -13,7 +13,7 @@
           userEmail = "yurifl03@gmail.com";
           userName = "yurifrl";
           signing = {
-            key = "rsa4096";
+            key = "85646DD76932F94F448F658E39D11F6BDD0E4BFA";
             signByDefault = true;
             gpgPath = "/usr/local/MacGPG2/bin/gpg2";
           };
