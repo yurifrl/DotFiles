@@ -5,7 +5,7 @@
         "revision": "6fa389091d1b7450df0701d6a0d20e862bda6507"
       },
       "homebrew/core": {
-        "revision": "160b47aa1c5a6ca88c91b007110f77b6a5b7f068"
+        "revision": "f04eed9818aa3342597649c2bef1f48b94748e34"
       }
     },
     "cask": {
@@ -80,6 +80,12 @@
         "options": {
           "full_name": "amethyst"
         }
+      },
+      "gpg-suite": {
+        "version": "2020.2",
+        "options": {
+          "full_name": "gpg-suite"
+        }
       }
     }
   },
@@ -88,7 +94,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "2.6.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "160b47aa1c5a6ca88c91b007110f77b6a5b7f068",
+        "Homebrew/homebrew-core": "f04eed9818aa3342597649c2bef1f48b94748e34",
         "CLT": "12.2.0.0.1.1604076827",
         "Xcode": "12.2",
         "macOS": "11.0.1"

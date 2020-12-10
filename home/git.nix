@@ -12,8 +12,11 @@
           enable = true;
           userEmail = "yurifl03@gmail.com";
           userName = "yurifrl";
-          # signing.key = "GPG-KEY-ID";
-          # signing.signByDefault = true;
+          signing = {
+            key = "rsa4096";
+            signByDefault = true;
+            gpgPath = "/usr/local/MacGPG2/bin/gpg2";
+          };
           aliases = {
             a = "add";
             ac = "!git chl && git add";
