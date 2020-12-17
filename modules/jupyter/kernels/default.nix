@@ -1,0 +1,5 @@
+{ callPackage }:
+
+{
+  java = callPackage ./java;
+}

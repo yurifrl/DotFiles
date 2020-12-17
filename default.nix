@@ -44,6 +44,7 @@ in {
     vim
     yuri.elixir-ls
     yuri.osxfuse
+    yuri.git-hooks
   ];
 
   # Environment Variables enabled system wide?

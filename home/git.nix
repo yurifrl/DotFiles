@@ -35,6 +35,14 @@
             wtf = "!wtc commit -a";
             sync = "!git pull && git push";
           };
+          extraConfig = {
+            hooks = {
+              global = "/Users/yurif/DotFiles/home/config/githooks";
+            };
+            init = {
+              templatedir = "/Users/yurif/.git-template-with-git-hooks";
+            };
+          };
         };
       };
     };

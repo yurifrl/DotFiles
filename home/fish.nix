@@ -35,13 +35,16 @@
           # ];
           shellInit =
           ''
+          # install plugins installer
           if not functions -q fisher
               curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
               fish -c fisher
           end
 
+          # Symlink the ssh folder
           ln -sfn $KEYBASE/home/ssh $HOME/.ssh
 
+          # Load Envs
           ev -q "$KEYBASE/envs"
           '';
           shellAliases = {
@@ -65,10 +68,11 @@
             m = "git mergetool";
             lg = "gitui";
             gui = "gitui";
-            w = "cd $HOME/WorkDir/github.com/yurifrl";
+            wy = "cd $HOME/WorkDir/github.com/yurifrl";
+            w = "cd $HOME/WorkDir/github.com/team-telnyx";
             g = "git";
             gti = "git";
-            k = "kubect";
+            k = "kubectl";
             proj = "touch .projectile";
             gh = "git-hub";
             vrau = "cd $HOME/DotFiles & brew bundle install";

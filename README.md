@@ -92,3 +92,5 @@ brew bundle cleanup
 - [The official installation script](https://github.com/NixOS/nix/blob/master/scripts/create-darwin-volume.sh)
 - [nix darwin manual](https://daiderd.com/nix-darwin/manual/index.html)
 - [brew and nix](https://www.mathiaspolligkeit.de/dev/exploring-nix-on-macos/)
+- [githooks](https://githooks.com/)
+- [git-hooks](https://github.com/git-hooks/git-hooks)

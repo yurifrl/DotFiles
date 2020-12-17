@@ -55,6 +55,8 @@ This function should only modify configuration layer settings."
       ;; Langs
       (scala :variables
               scala-backend 'scala-metals)
+      org
+      ansible
       purescript
       php
       (elixir :variables elixir-backend 'lsp elixir-ls-path "/run/current-system/sw/bin/")
@@ -65,9 +67,11 @@ This function should only modify configuration layer settings."
       html
       emacs-lisp
       markdown
+      rust
       yaml
       terraform
       docker
+      c-c++
       (haskell :variables
                 haskell-enable-hindent t
                 haskell-completion-backend 'lsp
@@ -545,6 +549,8 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
+  ;; [config] Start maximized
+  (add-to-list 'default-frame-alist '(fullscreen . maximized))
   ;; [config] Disable alarm
   (setq byte-compile-warnings '(cl-functions))
   ;; [fix]
