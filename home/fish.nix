@@ -12,7 +12,7 @@
           ".config/fish/fishfile" = {
             recursive = true;
             text =
-            ''
+              ''
             matchai/spacefish
             joehillen/ev-fish
             '';
@@ -22,19 +22,8 @@
       programs = {
         fish = {
           enable = true;
-          # plugins = [
-          #   {
-          #     name = "foreign-env";
-          #     src = pkgs.fetchFromGitHub {
-          #       owner = "oh-my-fish";
-          #       repo = "plugin-foreign-env";
-          #       rev = "dddd9213272a0ab848d474d0cbde12ad034e65bc";
-          #       sha256 = "00xqlyl3lffc5l0viin1nyp819wf81fncqyz87jx8ljjdhilmgbs";
-          #     };
-          #   }
-          # ];
           shellInit =
-          ''
+            ''
           # install plugins installer
           if not functions -q fisher
               curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
@@ -46,7 +35,15 @@
 
           # Load Envs
           ev -q "$KEYBASE/envs"
+
+          # Env for ls
+          set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
           '';
+          functions = {
+            ls = {
+              body = "command ls -G $argv";
+            };
+          };
           shellAliases = {
             ".." = "cd ..";
             x = "exit";

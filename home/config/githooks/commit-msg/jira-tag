@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# https://gist.github.com/nivrith/f047a95af39a02f4c96e333f4da8c9a1#file-prepare-commit-msg-sh
+# https://medium.com/bytelimes/automate-issue-numbers-in-git-commit-messages-2790ae6fe071
+
 BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
 
 # Ensure BRANCH_NAME is not empty and is not in a detached HEAD state (i.e. rebase).
