@@ -20,3 +20,6 @@
 (setq history-delete-duplicates t)
 ;; Hide hell buffers
 (setq helm-boring-buffer-regexp-list (list (rx "*Messages") (rx "*eldoc")))
+;; [config] add nix bin to path
+(setenv "PATH" (concat (getenv "PATH") ":/run/current-system/sw/bin"))
+(setq exec-path (append exec-path '("/run/current-system/sw/bin")))

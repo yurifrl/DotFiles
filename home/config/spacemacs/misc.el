@@ -26,3 +26,9 @@
 (add-hook 'elixir-mode-hook 'eglot-ensure)
 ;; Make sure to edit the path appropriately, use the .bat script instead for Windows
 (add-to-list 'eglot-server-programs '(elixir-mode "/run/current-system/sw/bin/"))
+;;
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((rust . t)
+   (cpp . t)
+   (elixir . t)))
