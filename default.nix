@@ -9,6 +9,8 @@ in {
   imports = [
     ./home
     # modules.vscode
+    # modules.rust
+    # modules.jupyter
   ];
 
   nixpkgs.config = {
@@ -26,12 +28,17 @@ in {
   environment.systemPackages = with pkgs;[
     ag
     alacritty
+    ansible
+    ansible-lint
+    clang
+    cmake
     elixir
     emacs
     git-hub
     gitAndTools.diff-so-fancy
     gitAndTools.gitui
     powerline-fonts
+    pre-commit
     ranger
     tmux
     vim
@@ -46,6 +53,8 @@ in {
     # Disable docker for spacefish
     SPACEFISH_DOCKER_SHOW = "false";
     KEYBASE = keybase;
+    # Disable CGO
+    CGO_ENABLED="0";
   };
 
   nix = {
