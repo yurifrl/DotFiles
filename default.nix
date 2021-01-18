@@ -42,6 +42,8 @@ in {
     ranger
     tmux
     vim
+    inetutils
+    azure-cli
     yuri.elixir-ls
     yuri.osxfuse
     yuri.git-hooks
