@@ -8,6 +8,7 @@ let
 in {
   imports = [
     ./home
+    modules.python
     # modules.vscode
     # modules.rust
     # modules.jupyter
@@ -30,9 +31,9 @@ in {
     alacritty
     ansible
     ansible-lint
-    clang
     cmake
-    elixir
+    clang
+    # elixir
     emacs
     git-hub
     gitAndTools.diff-so-fancy
@@ -44,9 +45,13 @@ in {
     vim
     inetutils
     azure-cli
+    jq
+    consul
+    siege
     yuri.elixir-ls
     yuri.osxfuse
     yuri.git-hooks
+    python37Packages.youtube-dl
   ];
 
   # Environment Variables enabled system wide?
@@ -58,6 +63,10 @@ in {
     KEYBASE = keybase;
     # Disable CGO
     CGO_ENABLED="0";
+    # AUTOCONF version seems to mismatch
+    KERL_USE_AUTOCONF="no";
+    # asdf and kerl need this to build erlang
+    # CC="gcc-9";
   };
 
   nix = {

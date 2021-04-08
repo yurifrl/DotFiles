@@ -32,68 +32,68 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-    '(
-      ;; ----------------------------------------------------------------
-      ;; Example of useful layers you may want to use right away.
-      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
-      ;; `M-m f e R' (Emacs style) to install them.
-      ;; ----------------------------------------------------------------
-      ;; auto-completion
-      ;; better-defaults
-      ;; Not sure
-      git
-      version-control
-      treemacs
-      ;; Other
-      spacemacs-evil
-      neotree
-      better-defaults
-      evil-commentary
-      multiple-cursors
-      (helm :variables
-            history-delete-duplicates t)
-      ;; Langs
-      (scala :variables
-              scala-backend 'scala-metals)
-      org
-      ansible
-      purescript
-      php
-      (elixir :variables elixir-backend 'lsp elixir-ls-path "/run/current-system/sw/bin/")
-      (java :variables java-backend 'lsp)
-      shell-scripts
-      nixos
-      javascript
-      html
-      emacs-lisp
-      markdown
-      rust
-      yaml
-      terraform
-      docker
-      c-c++
-      (haskell :variables
-                haskell-enable-hindent t
-                haskell-completion-backend 'lsp
-                haskell-process-type 'cabal-new-repl)
-      ;; [syntax-checking, auto-completion, lsp]
-      dap
-      (go :variables
-          go-backend 'lsp
-          ;; OK
-          go-format-before-save t
-          gofmt-command "goimports"
-          go-tab-width 4)
-      ;; (spell-checking :variables
-      ;;                 spell-checking-enable-auto-dictionary t)
-      syntax-checking
-      auto-completion
-      dap
-      (lsp :variables
-            lsp-haskell-process-path-hie "ghcide"
-            lsp-haskell-process-args-hie '()
-            lsp-ui-sideline-enable nil
-            lsp-ui-doc-enable nil))
+   '(
+     ;; ----------------------------------------------------------------
+     ;; Example of useful layers you may want to use right away.
+     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
+     ;; `M-m f e R' (Emacs style) to install them.
+     ;; ----------------------------------------------------------------
+     ;; auto-completion
+     ;; better-defaults
+     ;; Not sure
+     git
+     version-control
+     treemacs
+     ;; Other
+     spacemacs-evil
+     neotree
+     better-defaults
+     evil-commentary
+     multiple-cursors
+     (helm :variables
+           history-delete-duplicates t)
+     ;; Langs
+     (scala :variables
+            scala-backend 'scala-metals)
+     org
+     ansible
+     purescript
+     php
+     (elixir :variables elixir-backend 'lsp elixir-ls-path "/Users/yurif/.asdf/shims/elixir")
+     (java :variables java-backend 'lsp)
+     shell-scripts
+     nixos
+     javascript
+     html
+     emacs-lisp
+     markdown
+     rust
+     yaml
+     terraform
+     docker
+     c-c++
+     (haskell :variables
+              haskell-enable-hindent t
+              haskell-completion-backend 'lsp
+              haskell-process-type 'cabal-new-repl)
+     ;; [syntax-checking, auto-completion, lsp]
+     dap
+     (go :variables
+         go-backend 'lsp
+         ;; OK
+         go-format-before-save t
+         gofmt-command "goimports"
+         go-tab-width 4)
+     ;; (spell-checking :variables
+     ;;                 spell-checking-enable-auto-dictionary t)
+     syntax-checking
+     auto-completion
+     dap
+     (lsp :variables
+          lsp-haskell-process-path-hie "ghcide"
+          lsp-haskell-process-args-hie '()
+          lsp-ui-sideline-enable nil
+          lsp-ui-doc-enable nil))
 
 
    ;; List of additional packages that will be installed without being wrapped
@@ -104,28 +104,30 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-  dotspacemacs-additional-packages '(
-                                  pkgbuild-mode
-                                  rainbow-delimiters
-                                  smartparens
-                                  evil-smartparens
-                                  elixir-mode
-                                  eglot
-                                  ;; eglot
-                                  ;; [neotree]
-                                  winum
-                                  ;; Auto update keyring key
-                                  gnu-elpa-keyring-update
-                                  ;; purescript-mode
-                                  ;; psci
-                                  ;; psc-ide-emacs
-                                  )
+   dotspacemacs-additional-packages '(
+                                      pkgbuild-mode
+                                      rainbow-delimiters
+                                      smartparens
+                                      evil-smartparens
+                                      elixir-mode
+                                      eglot
+                                      ;; lsp-origami
+                                      ;; eglot
+                                      ;; [neotree]
+                                      winum
+                                      ;; Auto update keyring key
+                                      gnu-elpa-keyring-update
+                                      ;; purescript-mode
+                                      ;; psci
+                                      ;; psc-ide-emacs
+                                      )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(
+                                    alchemist)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -438,11 +440,15 @@ It should only modify the values of Spacemacs settings."
    ;;   :size-limit-kb 1000)
    ;; When used in a plist, `visual' takes precedence over `relative'.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers '(:absolute t
+                                         :disabled-for-modes dired-mode
+                                         doc-view-mode
+                                         pdf-view-mode
+                                         :size-limit-kb 1000)
 
    ;; Code folding method. Possible values are `evil', `origami' and `vimish'.
    ;; (default 'evil)
-   dotspacemacs-folding-method 'evil
+   dotspacemacs-folding-method 'origami
 
    ;; If non-nil `smartparens-strict-mode' will be enabled in programming modes.
    ;; (default nil)
@@ -568,9 +574,9 @@ dump."
 
 (defun dotspacemacs/user-config ()
   (load "~/DotFiles/home/config/spacemacs/keybindings")
+  (load "~/DotFiles/home/config/spacemacs/misc")
   (load "~/DotFiles/home/config/spacemacs/hooks")
-  (load "~/DotFiles/home/config/spacemacs/vars")
-  (load "~/DotFiles/home/config/spacemacs/misc"))
+  (load "~/DotFiles/home/config/spacemacs/vars"))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

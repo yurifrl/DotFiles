@@ -1,11 +1,21 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 
+# Fuck that
+brew "golang"
+brew "rust"
+brew "haskell-stack"
+brew "cargo-edit"
+brew "haskell-stack"
+brew "asdf"
+brew "k6"
+brew "loom"
+
+#
 cask "docker"
 cask "slack"
 cask "discord"
 cask "zoom"
-# cask "forticlient" # Out of date
 cask "whatsapp"
 cask "notion"
 cask "parsec"
@@ -18,13 +28,10 @@ cask "visual-studio-code"
 cask "nordvpn"
 cask "background-music"
 cask "telegram"
-
-# Fuck that
-brew "golang"
-brew "rust"
-brew "haskell-stack"
-brew "jupyterlab"
-brew "cargo-edit"
+cask "qbittorrent"
+cask "vlc"
+cask "obsidian"
+cask "lens"
 
 # Also fuck that
 tap "riscv/riscv"

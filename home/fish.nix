@@ -38,6 +38,9 @@
 
           # Env for ls
           set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
+
+          # Load asdf
+          source /usr/local/opt/asdf/asdf.fish
           '';
           functions = {
             ls = {
@@ -73,7 +76,11 @@
             proj = "touch .projectile";
             gh = "git-hub";
             vrau = "cd $HOME/DotFiles & brew bundle install";
-            uvrau = "cd $HOME/DotFiles & brew bundle cleanup";
+            uvrau = "cd $HOME/DotFiles & brew bundle cleanup -f";
+            vraug = "brew bundle install --global";
+            uvraug = "brew bundle cleanup -f --global";
+            macunfuckafterupdate = "xcode-select --install";
+            listpath = ''echo $PATH | tr " " "\n" | nl'';
           };
         };
       };

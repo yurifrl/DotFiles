@@ -9,6 +9,7 @@ with builtins;
     ./alacritty.nix
     ./tmux.nix
     ./emacs.nix
+    ./brew.nix
   ];
 
   home-manager = {

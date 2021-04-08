@@ -35,6 +35,9 @@
             wtf = "!wtc commit -a";
             sync = "!git pull && git push";
           };
+          ignores = [
+            ".DS_Store"
+          ];
           extraConfig = {
             hooks = {
               global = "/Users/yurif/DotFiles/home/config/githooks";
