@@ -58,15 +58,9 @@ in {
   # needs shell complete reboot
   environment.variables = {
     EDITOR = "vim";
-    # Disable docker for spacefish
-    SPACEFISH_DOCKER_SHOW = "false";
     KEYBASE = keybase;
     # Disable CGO
     CGO_ENABLED="0";
-    # AUTOCONF version seems to mismatch
-    KERL_USE_AUTOCONF="no";
-    # asdf and kerl need this to build erlang
-    # CC="gcc-9";
   };
 
   nix = {

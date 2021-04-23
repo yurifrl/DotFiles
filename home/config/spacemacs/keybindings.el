@@ -9,5 +9,5 @@
 (with-eval-after-load 'projectile
   (define-key projectile-mode-map (kbd "C-c p") 'helm-projectile)
   (define-key projectile-mode-map (kbd "C-c s") 'helm-projectile-switch-project))
-;; [keybinds] disable home and end
-;; (dolist (key '("<home>" "<end>")) (global-unset-key key))
+;; [magit] Magit-status with C-x g
+(global-set-key (kbd "C-x g") 'magit-status)

@@ -16,6 +16,13 @@
               ref = "develop";
             };
           };
+          ".config/elisp/restclient-vscode-compatible" = {
+            recursive = true;
+            source = builtins.fetchGit {
+              url = "https://www.yatex.org/gitbucket/git/Asya-kawai/restclient-vscode-compatible.git";
+              ref = "master";
+            };
+          };
           ".spacemacs".source = ./config/spacemacs.el;
         };
       };

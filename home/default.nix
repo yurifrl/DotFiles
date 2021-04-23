@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 with builtins;
+let
+  ignore = ''
+  *.log
+  *.lock
+  '';
+in
 {
   imports = [
     <home-manager/nix-darwin>
@@ -17,6 +23,16 @@ with builtins;
     users.yurif = { pkgs, ... }: {
       programs = {
         vim.enable = true;
+      };
+      home = {
+        file = {
+          ".ignore" = {
+            text = ignore;
+          };
+          ".agignore" = {
+            text = ignore;
+          };
+        };
       };
     };
   };

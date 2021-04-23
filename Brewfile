@@ -9,7 +9,6 @@ brew "cargo-edit"
 brew "haskell-stack"
 brew "asdf"
 brew "k6"
-brew "loom"
 
 #
 cask "docker"
@@ -32,6 +31,9 @@ cask "qbittorrent"
 cask "vlc"
 cask "obsidian"
 cask "lens"
+cask "wkhtmltopdf"
+cask "loom"
+cask "dash"
 
 # Also fuck that
 tap "riscv/riscv"

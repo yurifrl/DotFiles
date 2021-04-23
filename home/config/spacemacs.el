@@ -58,12 +58,12 @@ This function should only modify configuration layer settings."
      org
      ansible
      purescript
-     php
      (elixir :variables elixir-backend 'lsp elixir-ls-path "/Users/yurif/.asdf/shims/elixir")
      (java :variables java-backend 'lsp)
      shell-scripts
      nixos
      javascript
+     react
      html
      emacs-lisp
      markdown
@@ -72,6 +72,8 @@ This function should only modify configuration layer settings."
      terraform
      docker
      c-c++
+     (dash :variables
+           dash-autoload-common-docsets nil)
      (haskell :variables
               haskell-enable-hindent t
               haskell-completion-backend 'lsp
@@ -105,6 +107,7 @@ This function should only modify configuration layer settings."
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
+                                      rjsx-mode
                                       pkgbuild-mode
                                       rainbow-delimiters
                                       smartparens
@@ -120,6 +123,10 @@ This function should only modify configuration layer settings."
                                       ;; purescript-mode
                                       ;; psci
                                       ;; psc-ide-emacs
+                                      ;; restclient
+                                      ;; (restclient :location (recipe
+                                      ;;                          :fetcher github
+                                      ;;                          :repo "yurifrl/restclient"))
                                       )
 
    ;; A list of packages that cannot be updated.
@@ -576,7 +583,13 @@ dump."
   (load "~/DotFiles/home/config/spacemacs/keybindings")
   (load "~/DotFiles/home/config/spacemacs/misc")
   (load "~/DotFiles/home/config/spacemacs/hooks")
-  (load "~/DotFiles/home/config/spacemacs/vars"))
+  (load "~/DotFiles/home/config/spacemacs/vars")
+
+  (load "~/WorkDir/github.com/yurifrl/restclient-vscode-compatible/restclient.el")
+  (load "~/WorkDir/github.com/yurifrl/restclient-vscode-compatible/restclient-helm.el")
+  (load "~/WorkDir/github.com/yurifrl/restclient-vscode-compatible/restclient-jq.el")
+  (require 'restclient)
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

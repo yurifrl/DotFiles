@@ -39,6 +39,15 @@
           # Env for ls
           set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
 
+          # Disable docker for spacefish
+          set -Ux SPACEFISH_DOCKER_SHOW "false"
+
+          # It makes new lines slow
+          set -Ux SPACEFISH_ELIXIR_SHOW "false"
+
+          # Set default
+          set -Ux MIX_ENV "test"
+
           # Load asdf
           source /usr/local/opt/asdf/asdf.fish
           '';
