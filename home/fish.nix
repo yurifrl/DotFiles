@@ -55,6 +55,20 @@
             ls = {
               body = "command ls -G $argv";
             };
+            dotenv = {
+              body = ''
+                set -l envfile ".env"
+                if [ (count $argv) -gt 0 ]
+                  set envfile $argv[1]
+                end
+
+                if test -e $envfile
+                  for line in (cat $envfile)
+                    set -xg (echo $line | cut -d = -f 1) (echo $line | cut -d = -f 2-)
+                  end
+                end
+              '';
+            };
           };
           shellAliases = {
             ".." = "cd ..";
@@ -90,6 +104,11 @@
             uvraug = "brew bundle cleanup -f --global";
             macunfuckafterupdate = "xcode-select --install";
             listpath = ''echo $PATH | tr " " "\n" | nl'';
+            asdf_fix_node = ''asdf reshim nodejs'';
+            npx = "npx --package=git-mob";
+            t = "mix t";
+            tt = "mix test";
+            ti = "MIX_ENV=test iex -S mix tix";
           };
         };
       };

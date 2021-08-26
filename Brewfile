@@ -34,6 +34,7 @@ cask "lens"
 cask "wkhtmltopdf"
 cask "loom"
 cask "dash"
+cask "figma"
 
 # Also fuck that
 tap "riscv/riscv"
