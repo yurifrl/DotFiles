@@ -1,0 +1,26 @@
+[alias]
+	s = status
+	c = commit -m
+	a = add
+	ck = checkout
+        ll = git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
+	undo-last-commit = reset HEAD~1
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB0+idP2xNu98AwFGVHNhvZGP7dL16P5djnouei7/5Vx
+  name = Yuri
+  email = yurifl03@gmail.com
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true

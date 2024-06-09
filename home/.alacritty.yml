@@ -1,0 +1,15 @@
+# https://github.com/tmcdonell/config-alacritty/blob/master/alacritty.yml
+font:
+  size: 16
+  normal:
+    family: "Fira Code"
+key_bindings:
+  - { key: "N", mods: "Control|Shift", action: "CreateNewWindow" }
+  # - { key: T, mods: Alt, chars: "\x1bt" }
+
+
+# https://github.com/alacritty/alacritty/issues/93
+# https://github.com/alacritty/alacritty/issues/62
+
+window:
+  option_as_alt: Both
