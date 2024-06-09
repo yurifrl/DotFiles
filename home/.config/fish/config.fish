@@ -18,6 +18,7 @@ alias l="ls -la"
 alias x="exit"
 alias cw="cd ~/Workdir/"
 alias k="kubectl"
+alias bundle="brew bundle --file=~/.config/Brewfile"
 
 function ip-gateway
     route get default | grep gateway | awk '{print $2}'

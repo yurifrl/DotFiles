@@ -1,4 +1,4 @@
-# https://github.com/gmr458/.dotfiles/blob/main/zellij/.config/zellij/config.kdl
+// https://github.com/gmr458/.dotfiles/blob/main/zellij/.config/zellij/config.kdl
 keybinds clear-defaults=true {
     normal {}
     locked {

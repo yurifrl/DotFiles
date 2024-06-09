@@ -1,11 +1,28 @@
+
 # https://github.com/tmcdonell/config-alacritty/blob/master/alacritty.yml
 font:
   size: 16
   normal:
-    family: "Fira Code"
+    family: "FiraCode Nerd Font Mono"
+    style: Regular
+  
+  # The bold font face
+  bold:
+    family: "FiraCode Nerd Font Mono"
+    style: Bold
+  
+  # The italic font face
+  italic:
+    family: "FiraCode Nerd Font Mono"
+    style: Light
+
+
+# font:
+#   size: 16
+#   normal:
+#     family: "Fira Code"
 key_bindings:
   - { key: "N", mods: "Control|Shift", action: "CreateNewWindow" }
-  # - { key: T, mods: Alt, chars: "\x1bt" }
 
 
 # https://github.com/alacritty/alacritty/issues/93

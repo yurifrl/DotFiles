@@ -1,6 +1,9 @@
 # Yuri's OS X Dotfiles
 
 
+stow --target ~/ home
+
+
 ## Nvim
 
 - [Transform Your Neovim into a IDE: A Step-by-Step Guide - MartinLwx's Blog](https://martinlwx.github.io/en/config-neovim-from-scratch/)
