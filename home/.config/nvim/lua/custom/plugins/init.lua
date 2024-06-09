@@ -7,4 +7,5 @@ return {
 	-- Adding GitHub Copilot plugin
 	{ "github/copilot.vim" },
 	-- More plugins can be added here
+	require("kickstart.plugins.neo-tree"),
 }

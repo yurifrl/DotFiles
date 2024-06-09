@@ -53,14 +53,32 @@ return {
 			-- [[ Configure Telescope ]]
 			-- See `:help telescope` and `:help telescope.setup()`
 			require("telescope").setup({
+				pickers = {
+					-- Show hidden files in fuzzy finder
+					find_files = {
+						hidden = true,
+						no_ignore = false,
+					},
+				},
 				-- You can put your default mappings / updates / etc. in here
 				--  All the info you're looking for is in `:help telescope.setup()`
-				--
-				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
-				-- },
+				defaults = {
+					-- show hidden files in live grep
+					vimgrep_arguments = {
+						"rg",
+						"--hidden",
+						"--color=never",
+						"--no-heading",
+						"--with-filename",
+						"--line-number",
+						"--column",
+						"--smart-case",
+					},
+					file_ignore_patterns = { ".git/", "node_modules/", "vendor/" },
+					-- mappings = {
+					-- 	i = { ["<c-enter>"] = "to_fuzzy_refine" },
+					-- },
+				},
 				-- pickers = {}
 				extensions = {
 					["ui-select"] = {

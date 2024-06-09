@@ -48,4 +48,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+--- [[ My Keymaps ]]
+
+-- [[ My Commands]]
+
+-- vim: ts=2 sts=2 sw=2 et
+
 -- vim: ts=2 sts=2 sw=2 et
