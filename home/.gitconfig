@@ -1,11 +1,12 @@
 [alias]
-	s = status
-	c = commit -m
 	a = add
+	c = commit -m
+	s = !git status
 	ck = checkout
-        ll = git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
-	undo-last-commit = reset HEAD~1
-
+	wip = !git a . ; git c 'feat: wip :zap:' ; git push
+	undo-last-commit = reset HEAD~
+	l = log --color --graph --pretty=frmat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  deletemerged = !git branch --merged | grep -v \\* | xargs git branch -d
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -15,12 +16,9 @@
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB0+idP2xNu98AwFGVHNhvZGP7dL16P5djnouei7/5Vx
   name = Yuri
   email = yurifl03@gmail.com
-
 [gpg]
   format = ssh
-
 [gpg "ssh"]
   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-
 [commit]
   gpgsign = true
