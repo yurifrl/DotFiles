@@ -13,12 +13,12 @@
 	process = git-lfs filter-process
 	required = true
 [user]
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB0+idP2xNu98AwFGVHNhvZGP7dL16P5djnouei7/5Vx
-  name = Yuri
-  email = yurifl03@gmail.com
+	name = Yuri
+	email = yurifl03@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFuBzaZMCYHKAenPgIdOLTKKRQtNRgGgWien86lg4mUh
 [gpg]
-  format = ssh
+	format = ssh
 [gpg "ssh"]
-  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
-  gpgsign = true
+	gpgsign = true
