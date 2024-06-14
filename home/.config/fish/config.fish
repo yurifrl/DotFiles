@@ -12,6 +12,7 @@ set -Ux GOPATH /opt/homebrew/bin/go
 set -Ux NIX_GIT_CHECKS false
 
 alias bundle="brew bundle --file=~/.config/Brewfile --cleanup"
+alias z="zellij"
 alias cw="cd ~/Workdir/"
 alias gti="git"
 alias k="kubectl"
