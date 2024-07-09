@@ -1,3 +1,4 @@
+brew "gum"
 brew "atuin"
 brew "base64"
 brew "direnv"
@@ -35,6 +36,7 @@ brew "skaffold"
 brew "evans"
 brew "tilt"
 brew "istioctl"
+brew "percona-toolkit"
 
 cask "postman"
 cask "alacritty"
