@@ -40,7 +40,6 @@ brew "tilt"
 brew "istioctl"
 brew "percona-toolkit"
 brew "kubevela"
-brew "tap"
 
 cask "webcatalog"
 cask "postman"
@@ -75,6 +74,6 @@ tap "ktr0731/evans"
 tap "fluxcd/tap"
 
 def intel?
-	 `uname -m`.include?("x86_64")
+	`uname -m`.include?("x86_64")
 	cask "virtualbox"
 end

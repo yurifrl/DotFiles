@@ -30,5 +30,10 @@ function ip-gateway
     route get default | grep gateway | awk '{print $2}'
 end
 
+# Check if the terminal emulator is Alacritty
+if test "$1PASS_ENVS_LOADED" != "true"
+    load_envs_from_1pass
+end
+
 atuin init fish --disable-up-arrow | source
 starship init fish | source
