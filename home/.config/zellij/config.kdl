@@ -33,7 +33,7 @@ keybinds clear-defaults=true {
         bind "l" "Right" { MovePane "Right" ; }
     }
     tab {
-        bind "Alt t" { SwitchToMode "Normal" ; }
+        bind "Ctrl d" { SwitchToMode "Normal" ; }
         bind "b"     { BreakPane; SwitchToMode "Normal" ; }
         bind "h"     { MoveTab "Left" ; }
         bind "l"     { MoveTab "Right" ; }
@@ -119,7 +119,7 @@ keybinds clear-defaults=true {
         bind "Alt o" { SwitchToMode "Session" ; }
     }
     shared_except "tab" "locked" {
-        bind "Alt t" { SwitchToMode "Tab" ; }
+        bind "Ctrl d" { SwitchToMode "Tab" ; }
     }
     shared_except "move" "locked" {
         bind "Alt m" { SwitchToMode "Move" ; }
