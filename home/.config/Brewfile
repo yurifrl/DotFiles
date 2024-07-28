@@ -1,4 +1,6 @@
 brew "gum"
+brew "flux"
+brew "cloudflared"
 brew "atuin"
 brew "base64"
 brew "direnv"
@@ -37,7 +39,10 @@ brew "evans"
 brew "tilt"
 brew "istioctl"
 brew "percona-toolkit"
+brew "kubevela"
+brew "tap"
 
+cask "webcatalog"
 cask "postman"
 cask "alacritty"
 cask "obsidian"
@@ -67,6 +72,7 @@ cask "visual-studio-code"
 
 tap "ynqa/tap"
 tap "ktr0731/evans"
+tap "fluxcd/tap"
 
 def intel?
 	 `uname -m`.include?("x86_64")
